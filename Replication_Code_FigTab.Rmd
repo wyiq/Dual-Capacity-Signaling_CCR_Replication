@@ -1,0 +1,210 @@
+---
+title: "Replication Code"
+subtitle: "Dual-Capacity Signaling: How Police Show Regime Strength on Douyin"
+output:
+  html_document:
+    toc: true
+date: "2026-09-28"
+editor_options:
+  chunk_output_type: console
+---
+
+## Load Required Packages
+
+```{r setup, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+```{r session-info}
+sessionInfo()
+```
+
+## Main Results
+
+### REPLICATE TABLE 1: Validation of automated classification against human coding
+
+```{r table-1}
+labels <- read.csv("data/table_01_labels.csv")
+variables <- c("coercive_coder1", "administrative_coder1",
+               "coercive_coder2", "administrative_coder2",
+               "coercive_qwen", "administrative_qwen")
+stopifnot(nrow(labels) == 200L, all(variables %in% names(labels)))
+
+cohen <- function(x, y) {
+  complete <- !is.na(x) & !is.na(y)
+  x <- x[complete]
+  y <- y[complete]
+  observed <- mean(x == y)
+  expected <- mean(x == 1) * mean(y == 1) +
+    mean(x == 0) * mean(y == 0)
+  c(kappa = (observed - expected) / (1 - expected),
+    agreement = 100 * observed)
+}
+
+pairs <- data.frame(
+  Label = rep(c("Coercive", "Administrative"), each = 3),
+  `Rater pair` = rep(c("Coder 1 vs. Coder 2", "Coder 1 vs. Qwen3-Max",
+                       "Coder 2 vs. Qwen3-Max"), 2),
+  left = c("coercive_coder1", "coercive_coder1", "coercive_coder2",
+           "administrative_coder1", "administrative_coder1",
+           "administrative_coder2"),
+  right = c("coercive_coder2", "coercive_qwen", "coercive_qwen",
+            "administrative_coder2", "administrative_qwen",
+            "administrative_qwen"),
+  check.names = FALSE
+)
+values <- t(vapply(seq_len(nrow(pairs)), function(i) {
+  cohen(labels[[pairs$left[i]]], labels[[pairs$right[i]]])
+}, numeric(2)))
+
+kappa_4dp <- as.numeric(sprintf("%.4f", values[, "kappa"]))
+table_1 <- data.frame(
+  Label = pairs$Label,
+  `Rater pair` = pairs[["Rater pair"]],
+  `Cohen's kappa` = sprintf("%.3f", floor(kappa_4dp * 1000 + 0.5) / 1000),
+  `Simple agreement` = sprintf("%.2f%%", values[, "agreement"]),
+  check.names = FALSE
+)
+
+dir.create("Figures_Tables", showWarnings = FALSE)
+tex_agreement <- paste0(sub("%$", "", table_1[["Simple agreement"]]), "\\%")
+tex_rows <- sprintf("%s & %s & %s & %s \\\\",
+                    table_1$Label, table_1[["Rater pair"]],
+                    table_1[["Cohen's kappa"]], tex_agreement)
+writeLines(c(
+  "\\begin{table}[htbp]",
+  "\\centering",
+  "\\small",
+  "\\caption{Validation of automated classification against human coding}",
+  "\\label{tab:main-validation}",
+  "\\begin{tabular}{llcc}",
+  "\\toprule",
+  "Label & Rater pair & Cohen's $\\kappa$ & Simple agreement \\\\",
+  "\\midrule",
+  tex_rows[1:3],
+  "\\addlinespace",
+  tex_rows[4:6],
+  "\\bottomrule",
+  "\\end{tabular}",
+  "\\end{table}"
+), "Figures_Tables/Table_1.tex")
+knitr::kable(table_1)
+```
+
+The resulting file is [Table 1](Figures_Tables/Table_1.tex).
+
+### Generate remaining analytical tables and figures
+
+```{r run-analysis}
+source("code/run_analysis.R")
+generated <- run_analysis()
+cat("Generated", length(generated), "additional tables and figures.\n")
+```
+
+```{r display-functions, include=FALSE}
+show_figure <- function(name) {
+  path <- file.path("Figures_Tables", name)
+  stopifnot(file.exists(path))
+  cat(sprintf('<p><a href="%s">%s</a></p>\n', path, name))
+  cat(sprintf('<object data="%s" type="application/pdf" width="100%%" height="560px"></object>\n',
+              path))
+}
+show_table <- function(name) {
+  path <- file.path("Figures_Tables", name)
+  stopifnot(file.exists(path))
+  cat(sprintf('<p><a href="%s">%s</a></p>\n', path, name))
+}
+```
+
+### REPLICATE FIGURE 3: State capacity signaling over time
+
+```{r figure-3, results='asis'}
+show_figure("Figure_3.pdf")
+```
+
+### REPLICATE FIGURE 4: State capacity signaling by city
+
+```{r figure-4, results='asis'}
+show_figure("Figure_4.pdf")
+```
+
+### REPLICATE FIGURE 5: Event effects on signaling
+
+```{r figure-5, results='asis'}
+show_figure("Figure_5.pdf")
+```
+
+### REPLICATE FIGURE 6: City-level determinants
+
+```{r figure-6, results='asis'}
+show_figure("Figure_6.pdf")
+```
+
+### REPLICATE FIGURE 7: Predicted engagement
+
+```{r figure-7, results='asis'}
+show_figure("Figure_7.pdf")
+```
+
+## Additional Results in Appendices
+
+### REPLICATE TABLE A3: Event effects, 3-category outcome
+
+```{r table-a3, results='asis'}
+show_table("Table_A3.tex")
+```
+
+### REPLICATE TABLES A5–A10: City-level determinants, 3-category outcome
+
+```{r tables-a5-a10, results='asis'}
+for (i in 5:10) show_table(sprintf("Table_A%d.tex", i))
+```
+
+### REPLICATE TABLES A11–A12: Engagement models, 3-category outcome
+
+```{r tables-a11-a12, results='asis'}
+for (i in 11:12) show_table(sprintf("Table_A%d.tex", i))
+```
+
+### REPLICATE TABLES A13–A17: City-level determinants, 4-category outcome
+
+```{r tables-a13-a17, results='asis'}
+for (i in 13:17) show_table(sprintf("Table_A%d.tex", i))
+```
+
+### REPLICATE TABLE A18: Event effects, 4-category outcome
+
+```{r table-a18, results='asis'}
+show_table("Table_A18.tex")
+```
+
+### REPLICATE TABLES A19–A20: Engagement models, 4-category outcome
+
+```{r tables-a19-a20, results='asis'}
+for (i in 19:20) show_table(sprintf("Table_A%d.tex", i))
+```
+
+### REPLICATE APPENDIX FIGURE 2: LVLM description validation
+
+```{r figure-a2, results='asis'}
+show_figure("Appendix_Figure_2.pdf")
+```
+
+### REPLICATE APPENDIX FIGURE 3: LVLM versus human descriptions
+
+```{r figure-a3, results='asis'}
+show_figure("Appendix_Figure_3.pdf")
+```
+
+### REPLICATE APPENDIX FIGURE 4: Signaling over time, four categories
+
+```{r figure-a4, results='asis'}
+show_figure("Appendix_Figure_4.pdf")
+```
+
+### REPLICATE APPENDIX FIGURE 5: Signaling by city, four categories
+
+```{r figure-a5, results='asis'}
+show_figure("Appendix_Figure_5.pdf")
+```

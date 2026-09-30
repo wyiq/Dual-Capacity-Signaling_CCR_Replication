@@ -1,0 +1,46 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{6.5} D{.}{.}{6.5} D{.}{.}{6.5}}
+\toprule
+ & \multicolumn{1}{c}{Naive SE} & \multicolumn{1}{c}{Clustered SE (by City-Year)} & \multicolumn{1}{c}{Clustered SE (by City)} \\
+\midrule
+Administrative: (Intercept)            & 0.60^{***}              & 0.60^{***}              & 0.60^{***}              \\
+                                       & (0.01)                  & (0.03)                  & (0.04)                  \\
+Administrative: `GDP per Capita`       & -0.04^{***}             & -0.04                   & -0.04                   \\
+                                       & (0.01)                  & (0.05)                  & (0.06)                  \\
+Administrative: Population             & 0.07^{***}              & 0.07                    & 0.07^{*}                \\
+                                       & (0.01)                  & (0.04)                  & (0.04)                  \\
+Administrative: `Distance to Beijing`  & 0.15^{***}              & 0.15^{***}              & 0.15^{***}              \\
+                                       & (0.01)                  & (0.04)                  & (0.06)                  \\
+Administrative: `Urbanization Rate`    & -0.24^{***}             & -0.24^{***}             & -0.24^{***}             \\
+                                       & (0.02)                  & (0.05)                  & (0.06)                  \\
+Administrative: `Avg Yrs of Education` & 0.20^{***}              & 0.20^{***}              & 0.20^{***}              \\
+                                       & (0.02)                  & (0.06)                  & (0.07)                  \\
+No Signaling: (Intercept)              & -2.00^{***}             & -2.00^{***}             & -2.00^{***}             \\
+                                       & (0.10)                  & (0.06)                  & (0.07)                  \\
+No Signaling: `GDP per Capita`         & 0.04                    & 0.04                    & 0.04                    \\
+                                       & (0.03)                  & (0.12)                  & (0.16)                  \\
+No Signaling: Population               & -0.04^{*}               & -0.04                   & -0.04                   \\
+                                       & (0.02)                  & (0.10)                  & (0.07)                  \\
+No Signaling: `Distance to Beijing`    & 0.33^{***}              & 0.33^{***}              & 0.33^{**}               \\
+                                       & (0.03)                  & (0.11)                  & (0.16)                  \\
+No Signaling: `Urbanization Rate`      & -0.44^{***}             & -0.44^{***}             & -0.44^{***}             \\
+                                       & (0.03)                  & (0.11)                  & (0.14)                  \\
+No Signaling: `Avg Yrs of Education`   & 0.23^{***}              & 0.23^{**}               & 0.23^{*}                \\
+                                       & (0.04)                  & (0.09)                  & (0.13)                  \\
+\midrule
+Year FE                                & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                    & 74595.50                & 74595.50                & 74595.50                \\
+BIC                                    & 74841.78                & 74841.78                & 74841.78                \\
+Log Likelihood                         & -37269.75               & -37269.75               & -37269.75               \\
+Deviance                               & 74539.50                & 74539.50                & 74539.50                \\
+Num. obs.                              & 48798                   & 48798                   & 48798                   \\
+K                                      & 3                       & 3                       & 3                       \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Administrative vs Coercive signaling.}}
+\end{tabular}
+\caption{City-Level Determinants of State Capacity Signaling (Development and State Capacity)}
+\label{tab:part3_3cat_m1}
+\end{center}
+\end{table}

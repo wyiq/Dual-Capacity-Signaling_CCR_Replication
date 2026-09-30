@@ -1,0 +1,40 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{6.5} D{.}{.}{6.5} D{.}{.}{6.5}}
+\toprule
+ & \multicolumn{1}{c}{Naive SE} & \multicolumn{1}{c}{Clustered SE (by City-Year)} & \multicolumn{1}{c}{Clustered SE (by City)} \\
+\midrule
+Coercive + Administrative: (Intercept)               & -0.38^{***}             & -0.38^{***}             & -0.38^{***}             \\
+                                                     & (0.02)                  & (0.04)                  & (0.08)                  \\
+Coercive + Administrative: `Ethnic Minority Ratio`   & 0.07^{***}              & 0.07^{*}                & 0.07                    \\
+                                                     & (0.02)                  & (0.04)                  & (0.07)                  \\
+Coercive + Administrative: `Urban Unemployment Rate` & 0.07^{***}              & 0.07^{*}                & 0.07                    \\
+                                                     & (0.02)                  & (0.04)                  & (0.07)                  \\
+Administrative: (Intercept)                          & 1.06^{***}              & 1.06^{***}              & 1.06^{***}              \\
+                                                     & (0.01)                  & (0.04)                  & (0.08)                  \\
+Administrative: `Ethnic Minority Ratio`              & 0.09^{***}              & 0.09^{**}               & 0.09                    \\
+                                                     & (0.01)                  & (0.04)                  & (0.07)                  \\
+Administrative: `Urban Unemployment Rate`            & -0.05^{***}             & -0.05                   & -0.05                   \\
+                                                     & (0.01)                  & (0.04)                  & (0.06)                  \\
+No Signaling: (Intercept)                            & -1.54^{***}             & -1.54^{***}             & -1.54^{***}             \\
+                                                     & (0.10)                  & (0.08)                  & (0.10)                  \\
+No Signaling: `Ethnic Minority Ratio`                & 0.22^{***}              & 0.22^{***}              & 0.22^{**}               \\
+                                                     & (0.02)                  & (0.05)                  & (0.10)                  \\
+No Signaling: `Urban Unemployment Rate`              & -0.18^{***}             & -0.18^{**}              & -0.18                   \\
+                                                     & (0.02)                  & (0.09)                  & (0.12)                  \\
+\midrule
+Year FE                                              & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                                  & 94136.46                & 94136.46                & 94136.46                \\
+BIC                                                  & 94426.71                & 94426.71                & 94426.71                \\
+Log Likelihood                                       & -47035.23               & -47035.23               & -47035.23               \\
+Deviance                                             & 94070.46                & 94070.46                & 94070.46                \\
+Num. obs.                                            & 48798                   & 48798                   & 48798                   \\
+K                                                    & 4                       & 4                       & 4                       \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. 4-category outcome variable with separate Coercive+Administrative category.}}
+\end{tabular}
+\caption{City-Level Determinants of State Capacity Signaling - 4-Category Outcome (Social Stability)}
+\label{tab:part3_4cat_m3}
+\end{center}
+\end{table}

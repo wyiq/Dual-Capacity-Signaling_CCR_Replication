@@ -1,0 +1,46 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{6.5} D{.}{.}{6.5} D{.}{.}{6.5}}
+\toprule
+ & \multicolumn{1}{c}{Naive SE} & \multicolumn{1}{c}{Clustered SE (by City-Year)} & \multicolumn{1}{c}{Clustered SE (by City)} \\
+\midrule
+Coercive + Administrative: (Intercept)                      & -0.41^{***}             & -0.41^{***}             & -0.41^{***}             \\
+                                                            & (0.08)                  & (0.05)                  & (0.09)                  \\
+Coercive + Administrative: `Public Expenditure per capita`  & -0.02                   & -0.02                   & -0.02                   \\
+                                                            & (0.02)                  & (0.05)                  & (0.09)                  \\
+Coercive + Administrative: `Public Service Expenditure \%`  & 0.14^{***}              & 0.14^{**}               & 0.14                    \\
+                                                            & (0.02)                  & (0.06)                  & (0.10)                  \\
+Coercive + Administrative: `Public Security Expenditure \%` & -0.14^{***}             & -0.14^{**}              & -0.14                   \\
+                                                            & (0.02)                  & (0.07)                  & (0.12)                  \\
+Administrative: (Intercept)                                 & 1.25^{***}              & 1.25^{***}              & 1.25^{***}              \\
+                                                            & (0.06)                  & (0.05)                  & (0.09)                  \\
+Administrative: `Public Expenditure per capita`             & -0.05^{***}             & -0.05                   & -0.05                   \\
+                                                            & (0.01)                  & (0.04)                  & (0.07)                  \\
+Administrative: `Public Service Expenditure \%`             & 0.08^{***}              & 0.08                    & 0.08                    \\
+                                                            & (0.02)                  & (0.05)                  & (0.08)                  \\
+Administrative: `Public Security Expenditure \%`            & -0.01                   & -0.01                   & -0.01                   \\
+                                                            & (0.02)                  & (0.06)                  & (0.11)                  \\
+No Signaling: (Intercept)                                   & -1.85                   & -1.85^{***}             & -1.85^{***}             \\
+                                                            & (5.15)                  & (0.12)                  & (0.13)                  \\
+No Signaling: `Public Expenditure per capita`               & -0.12^{***}             & -0.12                   & -0.12                   \\
+                                                            & (0.03)                  & (0.08)                  & (0.14)                  \\
+No Signaling: `Public Service Expenditure \%`               & 0.21^{***}              & 0.21^{**}               & 0.21                    \\
+                                                            & (0.03)                  & (0.09)                  & (0.14)                  \\
+No Signaling: `Public Security Expenditure \%`              & -0.20^{***}             & -0.20^{*}               & -0.20                   \\
+                                                            & (0.03)                  & (0.11)                  & (0.18)                  \\
+\midrule
+Year FE                                                     & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                                         & 82490.15                & 82490.15                & 82490.15                \\
+BIC                                                         & 82802.90                & 82802.90                & 82802.90                \\
+Log Likelihood                                              & -41209.07               & -41209.07               & -41209.07               \\
+Deviance                                                    & 82418.15                & 82418.15                & 82418.15                \\
+Num. obs.                                                   & 43809                   & 43809                   & 43809                   \\
+K                                                           & 4                       & 4                       & 4                       \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. 4-category outcome variable with separate Coercive+Administrative category.}}
+\end{tabular}
+\caption{City-Level Determinants of State Capacity Signaling - 4-Category Outcome (Public Finance)}
+\label{tab:part3_4cat_m2}
+\end{center}
+\end{table}

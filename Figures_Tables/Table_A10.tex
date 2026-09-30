@@ -1,0 +1,66 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{6.5} D{.}{.}{6.5} D{.}{.}{6.5}}
+\toprule
+ & \multicolumn{1}{c}{Naive SE} & \multicolumn{1}{c}{Clustered SE (by City-Year)} & \multicolumn{1}{c}{Clustered SE (by City)} \\
+\midrule
+Administrative: (Intercept)                      & 0.74^{***}              & 0.74^{***}              & 0.74^{***}              \\
+                                                 & (0.05)                  & (0.03)                  & (0.04)                  \\
+Administrative: `GDP per Capita`                 & -0.16^{***}             & -0.16^{***}             & -0.16^{*}               \\
+                                                 & (0.02)                  & (0.06)                  & (0.10)                  \\
+Administrative: Population                       & 0.07^{***}              & 0.07                    & 0.07                    \\
+                                                 & (0.02)                  & (0.06)                  & (0.07)                  \\
+Administrative: `Distance to Beijing`            & 0.06^{***}              & 0.06                    & 0.06                    \\
+                                                 & (0.02)                  & (0.04)                  & (0.06)                  \\
+Administrative: `Urbanization Rate`              & -0.22^{***}             & -0.22^{***}             & -0.22^{***}             \\
+                                                 & (0.02)                  & (0.06)                  & (0.07)                  \\
+Administrative: `Avg Yrs of Education`           & 0.24^{***}              & 0.24^{***}              & 0.24^{**}               \\
+                                                 & (0.02)                  & (0.07)                  & (0.10)                  \\
+Administrative: `Public Expenditure per capita`  & 0.06^{***}              & 0.06                    & 0.06                    \\
+                                                 & (0.02)                  & (0.06)                  & (0.08)                  \\
+Administrative: `Public Service Expenditure \%`  & -0.00                   & -0.00                   & -0.00                   \\
+                                                 & (0.02)                  & (0.05)                  & (0.07)                  \\
+Administrative: `Public Security Expenditure \%` & 0.07^{***}              & 0.07^{*}                & 0.07                    \\
+                                                 & (0.02)                  & (0.04)                  & (0.05)                  \\
+Administrative: `Ethnic Minority Ratio`          & 0.03                    & 0.03                    & 0.03                    \\
+                                                 & (0.03)                  & (0.08)                  & (0.13)                  \\
+Administrative: `Urban Unemployment Rate`        & -0.08^{***}             & -0.08^{**}              & -0.08^{*}               \\
+                                                 & (0.01)                  & (0.04)                  & (0.04)                  \\
+No Signaling: (Intercept)                        & -2.45^{***}             & -2.45^{***}             & -2.45^{***}             \\
+                                                 & (0.02)                  & (0.06)                  & (0.07)                  \\
+No Signaling: `GDP per Capita`                   & -0.29^{***}             & -0.29^{***}             & -0.29^{**}              \\
+                                                 & (0.05)                  & (0.10)                  & (0.12)                  \\
+No Signaling: Population                         & -0.10^{***}             & -0.10                   & -0.10                   \\
+                                                 & (0.04)                  & (0.10)                  & (0.09)                  \\
+No Signaling: `Distance to Beijing`              & 0.25^{***}              & 0.25^{***}              & 0.25^{**}               \\
+                                                 & (0.04)                  & (0.09)                  & (0.10)                  \\
+No Signaling: `Urbanization Rate`                & -0.17^{***}             & -0.17^{**}              & -0.17                   \\
+                                                 & (0.04)                  & (0.08)                  & (0.11)                  \\
+No Signaling: `Avg Yrs of Education`             & 0.17^{***}              & 0.17                    & 0.17                    \\
+                                                 & (0.05)                  & (0.11)                  & (0.11)                  \\
+No Signaling: `Public Expenditure per capita`    & 0.07                    & 0.07                    & 0.07                    \\
+                                                 & (0.04)                  & (0.09)                  & (0.11)                  \\
+No Signaling: `Public Service Expenditure \%`    & 0.02                    & 0.02                    & 0.02                    \\
+                                                 & (0.03)                  & (0.11)                  & (0.16)                  \\
+No Signaling: `Public Security Expenditure \%`   & -0.15^{***}             & -0.15                   & -0.15                   \\
+                                                 & (0.04)                  & (0.09)                  & (0.15)                  \\
+No Signaling: `Ethnic Minority Ratio`            & -0.03                   & -0.03                   & -0.03                   \\
+                                                 & (0.05)                  & (0.11)                  & (0.12)                  \\
+No Signaling: `Urban Unemployment Rate`          & -0.11^{***}             & -0.11                   & -0.11                   \\
+                                                 & (0.03)                  & (0.07)                  & (0.10)                  \\
+\midrule
+Year FE                                          & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                              & 66364.43                & 66364.43                & 66364.43                \\
+BIC                                              & 66694.56                & 66694.56                & 66694.56                \\
+Log Likelihood                                   & -33144.21               & -33144.21               & -33144.21               \\
+Deviance                                         & 66288.43                & 66288.43                & 66288.43                \\
+Num. obs.                                        & 43809                   & 43809                   & 43809                   \\
+K                                                & 3                       & 3                       & 3                       \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Administrative vs Coercive signaling.}}
+\end{tabular}
+\caption{City-Level Determinants of State Capacity Signaling (Full Model)}
+\label{tab:part3_3cat_m6}
+\end{center}
+\end{table}

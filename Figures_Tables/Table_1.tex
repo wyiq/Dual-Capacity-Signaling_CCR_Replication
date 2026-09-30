@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Validation of automated classification against human coding}
+\label{tab:main-validation}
+\begin{tabular}{llcc}
+\toprule
+Label & Rater pair & Cohen's $\kappa$ & Simple agreement \\
+\midrule
+Coercive & Coder 1 vs. Coder 2 & 0.867 & 94.47\% \\
+Coercive & Coder 1 vs. Qwen3-Max & 0.902 & 96.00\% \\
+Coercive & Coder 2 vs. Qwen3-Max & 0.819 & 92.46\% \\
+\addlinespace
+Administrative & Coder 1 vs. Coder 2 & 0.617 & 84.42\% \\
+Administrative & Coder 1 vs. Qwen3-Max & 0.688 & 87.00\% \\
+Administrative & Coder 2 vs. Qwen3-Max & 0.639 & 87.44\% \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,58 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{6.5} D{.}{.}{6.5} D{.}{.}{6.5}}
+\toprule
+ & \multicolumn{1}{c}{Naive SE} & \multicolumn{1}{c}{Clustered SE (by City-Year)} & \multicolumn{1}{c}{Clustered SE (by City)} \\
+\midrule
+Coercive + Administrative: (Intercept)            & -0.39^{***}             & -0.39^{***}             & -0.39^{***}             \\
+                                                  & (0.02)                  & (0.04)                  & (0.07)                  \\
+Coercive + Administrative: `GDP per Capita`       & -0.17^{***}             & -0.17^{**}              & -0.17                   \\
+                                                  & (0.03)                  & (0.07)                  & (0.12)                  \\
+Coercive + Administrative: Population             & 0.03                    & 0.03                    & 0.03                    \\
+                                                  & (0.02)                  & (0.05)                  & (0.07)                  \\
+Coercive + Administrative: `Distance to Beijing`  & -0.01                   & -0.01                   & -0.01                   \\
+                                                  & (0.02)                  & (0.06)                  & (0.10)                  \\
+Coercive + Administrative: `Urbanization Rate`    & -0.18^{***}             & -0.18^{*}               & -0.18                   \\
+                                                  & (0.03)                  & (0.10)                  & (0.15)                  \\
+Coercive + Administrative: `Avg Yrs of Education` & 0.13^{***}              & 0.13                    & 0.13                    \\
+                                                  & (0.03)                  & (0.11)                  & (0.17)                  \\
+Administrative: (Intercept)                       & 1.06^{***}              & 1.06^{***}              & 1.06^{***}              \\
+                                                  & (0.02)                  & (0.04)                  & (0.06)                  \\
+Administrative: `GDP per Capita`                  & -0.12^{***}             & -0.12^{**}              & -0.12                   \\
+                                                  & (0.02)                  & (0.05)                  & (0.08)                  \\
+Administrative: Population                        & 0.08^{***}              & 0.08^{*}                & 0.08                    \\
+                                                  & (0.01)                  & (0.04)                  & (0.05)                  \\
+Administrative: `Distance to Beijing`             & 0.15^{***}              & 0.15^{***}              & 0.15^{**}               \\
+                                                  & (0.01)                  & (0.05)                  & (0.06)                  \\
+Administrative: `Urbanization Rate`               & -0.32^{***}             & -0.32^{***}             & -0.32^{***}             \\
+                                                  & (0.02)                  & (0.08)                  & (0.09)                  \\
+Administrative: `Avg Yrs of Education`            & 0.26^{***}              & 0.26^{***}              & 0.26^{**}               \\
+                                                  & (0.02)                  & (0.09)                  & (0.12)                  \\
+No Signaling: (Intercept)                         & -1.53^{***}             & -1.53^{***}             & -1.53^{***}             \\
+                                                  & (0.10)                  & (0.06)                  & (0.07)                  \\
+No Signaling: `GDP per Capita`                    & -0.04                   & -0.04                   & -0.04                   \\
+                                                  & (0.03)                  & (0.11)                  & (0.14)                  \\
+No Signaling: Population                          & -0.03                   & -0.03                   & -0.03                   \\
+                                                  & (0.03)                  & (0.09)                  & (0.06)                  \\
+No Signaling: `Distance to Beijing`               & 0.33^{***}              & 0.33^{***}              & 0.33^{**}               \\
+                                                  & (0.03)                  & (0.10)                  & (0.14)                  \\
+No Signaling: `Urbanization Rate`                 & -0.52^{***}             & -0.52^{***}             & -0.52^{***}             \\
+                                                  & (0.04)                  & (0.11)                  & (0.13)                  \\
+No Signaling: `Avg Yrs of Education`              & 0.29^{***}              & 0.29^{***}              & 0.29^{**}               \\
+                                                  & (0.04)                  & (0.10)                  & (0.13)                  \\
+\midrule
+Year FE                                           & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                               & 93533.97                & 93533.97                & 93533.97                \\
+BIC                                               & 93903.38                & 93903.38                & 93903.38                \\
+Log Likelihood                                    & -46724.99               & -46724.99               & -46724.99               \\
+Deviance                                          & 93449.97                & 93449.97                & 93449.97                \\
+Num. obs.                                         & 48798                   & 48798                   & 48798                   \\
+K                                                 & 4                       & 4                       & 4                       \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. 4-category outcome variable with separate Coercive+Administrative category.}}
+\end{tabular}
+\caption{City-Level Determinants of State Capacity Signaling - 4-Category Outcome (Development and State Capacity)}
+\label{tab:part3_4cat_m1}
+\end{center}
+\end{table}

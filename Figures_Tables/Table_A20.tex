@@ -1,0 +1,35 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{7.5} D{.}{.}{7.5} D{.}{.}{7.5} D{.}{.}{7.5}}
+\toprule
+ & \multicolumn{1}{c}{Likes} & \multicolumn{1}{c}{Comments} & \multicolumn{1}{c}{Shares} & \multicolumn{1}{c}{Collections} \\
+\midrule
+(Intercept)                                         & -8.41^{***}             & -12.20^{***}            & -14.86^{***}            & -15.06^{***}            \\
+                                                    & (0.30)                  & (1.06)                  & (0.82)                  & (0.68)                  \\
+Signal: Coercive (vs No Signaling)                  & -0.21^{***}             & 0.65^{***}              & 0.19^{***}              & -0.14^{***}             \\
+                                                    & (0.04)                  & (0.05)                  & (0.05)                  & (0.05)                  \\
+Signal: Administrative (vs No Signaling)            & -0.51^{***}             & -0.29^{***}             & -0.48^{***}             & -0.23^{***}             \\
+                                                    & (0.04)                  & (0.05)                  & (0.05)                  & (0.04)                  \\
+Signal: Coercive + Administrative (vs No Signaling) & -0.63^{***}             & -0.10^{*}               & -0.25^{***}             & -0.49^{***}             \\
+                                                    & (0.05)                  & (0.06)                  & (0.06)                  & (0.05)                  \\
+log(1 + Duration)                                   & -0.29^{***}             & -0.25^{***}             & 0.05^{***}              & 0.10^{***}              \\
+                                                    & (0.01)                  & (0.01)                  & (0.01)                  & (0.01)                  \\
+Has co-creator                                      & 2.88^{***}              & 1.51^{***}              & 1.23^{***}              & 2.47^{***}              \\
+                                                    & (0.07)                  & (0.08)                  & (0.08)                  & (0.08)                  \\
+log(1 + Account followers)                          & 0.89^{***}              & 0.80^{***}              & 0.94^{***}              & 0.99^{***}              \\
+                                                    & (0.01)                  & (0.01)                  & (0.01)                  & (0.01)                  \\
+\midrule
+Account follower control                            & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+City FE                                             & \multicolumn{1}{c}{No}  & \multicolumn{1}{c}{No}  & \multicolumn{1}{c}{No}  & \multicolumn{1}{c}{No}  \\
+Year FE                                             & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                                 & 820312.89               & 518440.09               & 547273.73               & 452376.74               \\
+Log Likelihood                                      & -410139.45              & -259203.05              & -273619.87              & -226171.37              \\
+Num. obs.                                           & 48858                   & 48858                   & 48858                   & 48858                   \\
+\bottomrule
+\multicolumn{5}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Coefficients are negative-binomial log-count coefficients; exponentiating a coefficient gives the incidence-rate ratio. Models include log(1 + duration), has co-creator, log(1 + account followers), and year fixed effects. City fixed effects are omitted because account follower count is constant within city and is therefore collinear with city fixed effects.}}
+\end{tabular}
+\caption{Negative binomial models of Douyin engagement by four-category state capacity signaling with account follower control}
+\label{tab:nb_engagement_4cat_with_followers}
+\end{center}
+\end{table}

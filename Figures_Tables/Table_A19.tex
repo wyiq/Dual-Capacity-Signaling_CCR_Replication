@@ -1,0 +1,33 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{7.5} D{.}{.}{7.5} D{.}{.}{7.5} D{.}{.}{7.5}}
+\toprule
+ & \multicolumn{1}{c}{Likes} & \multicolumn{1}{c}{Comments} & \multicolumn{1}{c}{Shares} & \multicolumn{1}{c}{Collections} \\
+\midrule
+(Intercept)                                         & 4.05^{***}              & -0.50                   & -1.98^{**}              & -1.27^{*}               \\
+                                                    & (0.29)                  & (1.05)                  & (0.86)                  & (0.69)                  \\
+Signal: Coercive (vs No Signaling)                  & -0.15^{***}             & 0.80^{***}              & 0.42^{***}              & 0.06                    \\
+                                                    & (0.04)                  & (0.05)                  & (0.05)                  & (0.04)                  \\
+Signal: Administrative (vs No Signaling)            & -0.39^{***}             & -0.11^{**}              & -0.21^{***}             & -0.24^{***}             \\
+                                                    & (0.04)                  & (0.05)                  & (0.05)                  & (0.04)                  \\
+Signal: Coercive + Administrative (vs No Signaling) & -0.47^{***}             & 0.19^{***}              & 0.06                    & -0.33^{***}             \\
+                                                    & (0.05)                  & (0.05)                  & (0.06)                  & (0.05)                  \\
+log(1 + Duration)                                   & -0.33^{***}             & -0.28^{***}             & -0.18^{***}             & -0.05^{***}             \\
+                                                    & (0.01)                  & (0.01)                  & (0.01)                  & (0.01)                  \\
+Has co-creator                                      & 2.94^{***}              & 1.75^{***}              & 2.12^{***}              & 2.73^{***}              \\
+                                                    & (0.07)                  & (0.08)                  & (0.08)                  & (0.07)                  \\
+\midrule
+Account follower control                            & \multicolumn{1}{c}{No}  & \multicolumn{1}{c}{No}  & \multicolumn{1}{c}{No}  & \multicolumn{1}{c}{No}  \\
+City FE                                             & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+Year FE                                             & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                                 & 812393.58               & 512567.72               & 539738.82               & 441924.55               \\
+Log Likelihood                                      & -406150.79              & -256237.86              & -269823.41              & -220916.27              \\
+Num. obs.                                           & 48858                   & 48858                   & 48858                   & 48858                   \\
+\bottomrule
+\multicolumn{5}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Coefficients are negative-binomial log-count coefficients; exponentiating a coefficient gives the incidence-rate ratio. Models include log(1 + duration), has co-creator, city fixed effects, and year fixed effects.}}
+\end{tabular}
+\caption{Negative binomial models of Douyin engagement by four-category state capacity signaling}
+\label{tab:nb_engagement_4cat_no_followers}
+\end{center}
+\end{table}

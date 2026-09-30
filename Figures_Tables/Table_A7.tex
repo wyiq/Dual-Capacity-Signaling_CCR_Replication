@@ -1,0 +1,34 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{6.5} D{.}{.}{6.5} D{.}{.}{6.5}}
+\toprule
+ & \multicolumn{1}{c}{Naive SE} & \multicolumn{1}{c}{Clustered SE (by City-Year)} & \multicolumn{1}{c}{Clustered SE (by City)} \\
+\midrule
+Administrative: (Intercept)               & 0.59^{***}              & 0.59^{***}              & 0.59^{***}              \\
+                                          & (0.01)                  & (0.04)                  & (0.07)                  \\
+Administrative: `Ethnic Minority Ratio`   & 0.06^{***}              & 0.06                    & 0.06                    \\
+                                          & (0.01)                  & (0.04)                  & (0.06)                  \\
+Administrative: `Urban Unemployment Rate` & -0.08^{***}             & -0.08^{**}              & -0.08^{*}               \\
+                                          & (0.01)                  & (0.04)                  & (0.05)                  \\
+No Signaling: (Intercept)                 & -2.00^{***}             & -2.00^{***}             & -2.00^{***}             \\
+                                          & (0.10)                  & (0.08)                  & (0.10)                  \\
+No Signaling: `Ethnic Minority Ratio`     & 0.18^{***}              & 0.18^{***}              & 0.18^{*}                \\
+                                          & (0.02)                  & (0.06)                  & (0.10)                  \\
+No Signaling: `Urban Unemployment Rate`   & -0.21^{***}             & -0.21^{**}              & -0.21^{*}               \\
+                                          & (0.02)                  & (0.09)                  & (0.12)                  \\
+\midrule
+Year FE                                   & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                       & 75100.19                & 75100.19                & 75100.19                \\
+BIC                                       & 75293.69                & 75293.69                & 75293.69                \\
+Log Likelihood                            & -37528.09               & -37528.09               & -37528.09               \\
+Deviance                                  & 75056.19                & 75056.19                & 75056.19                \\
+Num. obs.                                 & 48798                   & 48798                   & 48798                   \\
+K                                         & 3                       & 3                       & 3                       \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Administrative vs Coercive signaling.}}
+\end{tabular}
+\caption{City-Level Determinants of State Capacity Signaling (Social Stability)}
+\label{tab:part3_3cat_m3}
+\end{center}
+\end{table}

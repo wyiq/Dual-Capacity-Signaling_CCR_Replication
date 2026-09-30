@@ -1,0 +1,58 @@
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l D{.}{.}{6.5} D{.}{.}{6.5} D{.}{.}{6.5}}
+\toprule
+ & \multicolumn{1}{c}{Naive SE} & \multicolumn{1}{c}{Clustered SE (by City-Year)} & \multicolumn{1}{c}{Clustered SE (by City)} \\
+\midrule
+Administrative: (Intercept)                      & 0.75^{***}              & 0.75^{***}              & 0.75^{***}              \\
+                                                 & (0.05)                  & (0.03)                  & (0.03)                  \\
+Administrative: `GDP per Capita`                 & -0.11^{***}             & -0.11^{**}              & -0.11                   \\
+                                                 & (0.02)                  & (0.05)                  & (0.08)                  \\
+Administrative: Population                       & 0.05^{***}              & 0.05                    & 0.05                    \\
+                                                 & (0.01)                  & (0.04)                  & (0.04)                  \\
+Administrative: `Distance to Beijing`            & 0.09^{***}              & 0.09^{**}               & 0.09^{*}                \\
+                                                 & (0.01)                  & (0.04)                  & (0.05)                  \\
+Administrative: `Urbanization Rate`              & -0.23^{***}             & -0.23^{***}             & -0.23^{***}             \\
+                                                 & (0.02)                  & (0.06)                  & (0.07)                  \\
+Administrative: `Avg Yrs of Education`           & 0.23^{***}              & 0.23^{***}              & 0.23^{***}              \\
+                                                 & (0.02)                  & (0.07)                  & (0.07)                  \\
+Administrative: `Public Expenditure per capita`  & 0.06^{***}              & 0.06                    & 0.06                    \\
+                                                 & (0.02)                  & (0.04)                  & (0.05)                  \\
+Administrative: `Public Service Expenditure \%`  & 0.02                    & 0.02                    & 0.02                    \\
+                                                 & (0.02)                  & (0.05)                  & (0.07)                  \\
+Administrative: `Public Security Expenditure \%` & 0.07^{***}              & 0.07^{*}                & 0.07                    \\
+                                                 & (0.02)                  & (0.04)                  & (0.05)                  \\
+No Signaling: (Intercept)                        & -2.44^{***}             & -2.44^{***}             & -2.44^{***}             \\
+                                                 & (0.02)                  & (0.06)                  & (0.07)                  \\
+No Signaling: `GDP per Capita`                   & -0.20^{***}             & -0.20^{**}              & -0.20^{*}               \\
+                                                 & (0.04)                  & (0.09)                  & (0.11)                  \\
+No Signaling: Population                         & -0.10^{***}             & -0.10                   & -0.10                   \\
+                                                 & (0.03)                  & (0.09)                  & (0.08)                  \\
+No Signaling: `Distance to Beijing`              & 0.26^{***}              & 0.26^{***}              & 0.26^{**}               \\
+                                                 & (0.03)                  & (0.09)                  & (0.11)                  \\
+No Signaling: `Urbanization Rate`                & -0.18^{***}             & -0.18^{**}              & -0.18                   \\
+                                                 & (0.04)                  & (0.09)                  & (0.12)                  \\
+No Signaling: `Avg Yrs of Education`             & 0.17^{***}              & 0.17^{*}                & 0.17^{*}                \\
+                                                 & (0.05)                  & (0.10)                  & (0.09)                  \\
+No Signaling: `Public Expenditure per capita`    & 0.02                    & 0.02                    & 0.02                    \\
+                                                 & (0.03)                  & (0.07)                  & (0.09)                  \\
+No Signaling: `Public Service Expenditure \%`    & 0.05^{*}                & 0.05                    & 0.05                    \\
+                                                 & (0.03)                  & (0.10)                  & (0.16)                  \\
+No Signaling: `Public Security Expenditure \%`   & -0.16^{***}             & -0.16^{*}               & -0.16                   \\
+                                                 & (0.03)                  & (0.09)                  & (0.15)                  \\
+\midrule
+Year FE                                          & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+AIC                                              & 66400.48                & 66400.48                & 66400.48                \\
+BIC                                              & 66695.85                & 66695.85                & 66695.85                \\
+Log Likelihood                                   & -33166.24               & -33166.24               & -33166.24               \\
+Deviance                                         & 66332.48                & 66332.48                & 66332.48                \\
+Num. obs.                                        & 43809                   & 43809                   & 43809                   \\
+K                                                & 3                       & 3                       & 3                       \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize{Standard errors in parentheses. $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Administrative vs Coercive signaling.}}
+\end{tabular}
+\caption{City-Level Determinants of State Capacity Signaling (Development, State Capacity, and Public Finance)}
+\label{tab:part3_3cat_m4}
+\end{center}
+\end{table}
